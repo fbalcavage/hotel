@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Miners 1928 | Luxury Hotel & Venue | Pottsville, PA</title>
+<meta name="description" content="A 1928 Cass Gilbert masterpiece reborn as a luxury hotel and grand event venue in Pottsville, Pennsylvania. Opening Spring 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Lora', Georgia, serif;
+  color: #faf3eb;
+  background: #0d1b2a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  --navy-deep: #0d1b2a;
+  --navy: #1b2838;
+  --navy-light: #243447;
+  --copper: #d4956a;
+  --copper-light: #e8b298;
+  --copper-bright: #e6a97a;
+  --ivory: #faf3eb;
+  --ivory-dim: #f0e6d6;
+  --emerald: #2a6041;
+  --emerald-light: #3a7a55;
+  --gold: #c9a84c;
+  --text-body: #e0d6c8;
+  --text-muted: #9a8e80;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5 {
+  font-family: 'Tenor Sans', 'Georgia', serif;
+  font-weight: 400;
+  color: var(--ivory);
+}
+.label, .nav-link, .btn, .section-label {
+  font-family: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+}
+p, li, blockquote, input, textarea, select {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--text-body);
+}
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.text-center { text-align: center; }
+.text-copper { color: var(--copper); }
+.text-ivory { color: var(--ivory); }
+
+/* ===== ART DECO DECORATIVE ELEMENTS ===== */
+
+/* Chevron Divider */
+.chevron-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 3rem auto;
+  width: 200px;
+}
+.chevron-divider::before,
+.chevron-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--copper);
+}
+.chevron-divider .chevron {
+  width: 12px;
+  height: 12px;
+  border-right: 1.5px solid var(--copper);
+  border-bottom: 1.5px solid var(--copper);
+  transform: rotate(-45deg);
+  margin: 0 8px;
+}
+
+/* Geometric Corner Ornaments */
+.deco-corners {
+  position: relative;
+  padding: 3rem;
+}
+.deco-corners::before,
+.deco-corners::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-color: var(--copper);
+  border-style: solid;
+}
+.deco-corners::before {
+  top: 0; left: 0;
+  border-width: 2px 0 0 2px;
+}
+.deco-corners::after {
+  top: 0; right: 0;
+  border-width: 2px 2px 0 0;
+}
+.deco-corners .corner-bottom-left,
+.deco-corners .corner-bottom-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-color: var(--copper);
+  border-style: solid;
+}
+.deco-corners .corner-bottom-left {
+  bottom: 0; left: 0;
+  border-width: 0 0 2px 2px;
+}
+.deco-corners .corner-bottom-right {
+  bottom: 0; right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Stepped Border */
+.stepped-border {
+  position: relative;
+  padding: 2rem;
+}
+.stepped-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--copper), var(--copper)) top left / 100% 1px no-repeat,
+    linear-gradient(var(--copper), var(--copper)) top left / 1px 100% no-repeat,
+    linear-gradient(var(--copper), var(--copper)) bottom right / 100% 1px no-repeat,
+    linear-gradient(var(--copper), var(--copper)) bottom right / 1px 100% no-repeat;
+  pointer-events: none;
+}
+.stepped-border::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background:
+    linear-gradient(var(--copper), var(--copper)) top left / 100% 1px no-repeat,
+    linear-gradient(var(--copper), var(--copper)) top left / 1px 100% no-repeat,
+    linear-gradient(var(--copper), var(--copper)) bottom right / 100% 1px no-repeat,
+    linear-gradient(var(--copper), var(--copper)) bottom right / 1px 100% no-repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Sunburst / Fan Motif */
+.sunburst {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+.sunburst::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translateX(-50%);
+  background: conic-gradient(
+    from 180deg at 50% 100%,
+    transparent 0deg,
+    var(--copper) 2deg,
+    transparent 4deg,
+    transparent 12deg,
+    var(--copper) 14deg,
+    transparent 16deg,
+    transparent 24deg,
+    var(--copper) 26deg,
+    transparent 28deg,
+    transparent 36deg,
+    var(--copper) 38deg,
+    transparent 40deg,
+    transparent 48deg,
+    var(--copper) 50deg,
+    transparent 52deg,
+    transparent 60deg,
+    var(--copper) 62deg,
+    transparent 64deg,
+    transparent 72deg,
+    var(--copper) 74deg,
+    transparent 76deg,
+    transparent 84deg,
+    var(--copper) 86deg,
+    transparent 88deg,
+    transparent 96deg,
+    var(--copper) 98deg,
+    transparent 100deg,
+    transparent 108deg,
+    var(--copper) 110deg,
+    transparent 112deg,
+    transparent 120deg,
+    var(--copper) 122deg,
+    transparent 124deg,
+    transparent 132deg,
+    var(--copper) 134deg,
+    transparent 136deg,
+    transparent 144deg,
+    var(--copper) 146deg,
+    transparent 148deg,
+    transparent 156deg,
+    var(--copper) 158deg,
+    transparent 160deg,
+    transparent 168deg,
+    var(--copper) 170deg,
+    transparent 172deg,
+    transparent 180deg
+  );
+  opacity: 0.5;
+}
+.sunburst::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: var(--copper);
+  border-radius: 2px;
+}
+
+/* Diamond Accent */
+.diamond {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--copper);
+  transform: rotate(45deg);
+  margin: 0 12px;
+  vertical-align: middle;
+}
+
+/* Horizontal Rule - Deco Style */
+.deco-hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--copper) 20%,
+    var(--copper) 80%,
+    transparent
+  );
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+/* Deco line with center diamond */
+.deco-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  max-width: 500px;
+  gap: 0;
+}
+.deco-line::before,
+.deco-line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper));
+}
+.deco-line::after {
+  background: linear-gradient(to left, transparent, var(--copper));
+}
+.deco-line .diamond {
+  flex-shrink: 0;
+}
+
+/* Zigzag Pattern Border */
+.zigzag-top {
+  position: relative;
+}
+.zigzag-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background:
+    linear-gradient(135deg, var(--navy-deep) 33.33%, transparent 33.33%) 0 0 / 20px 20px,
+    linear-gradient(225deg, var(--navy-deep) 33.33%, transparent 33.33%) 0 0 / 20px 20px;
+  background-position: top center;
+}
+
+/* Stepped Section Transition */
+.stepped-transition {
+  position: relative;
+  padding-top: 60px;
+}
+.stepped-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 600px;
+  height: 40px;
+  background: var(--navy);
+  clip-path: polygon(
+    0% 0%, 10% 0%, 10% 33%, 20% 33%, 20% 0%,
+    80% 0%, 80% 33%, 90% 33%, 90% 0%, 100% 0%,
+    100% 100%, 0% 100%
+  );
+}
+
+/* Fan / Arch Decorative */
+.deco-arch {
+  width: 120px;
+  height: 60px;
+  margin: 0 auto 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.deco-arch::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--copper);
+  background: transparent;
+}
+.deco-arch::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid var(--copper);
+  opacity: 0.5;
+}
+
+/* Triple Line Accent */
+.triple-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 2rem auto;
+}
+.triple-line span {
+  display: block;
+  height: 1px;
+  background: var(--copper);
+}
+.triple-line span:nth-child(1) { width: 80px; }
+.triple-line span:nth-child(2) { width: 120px; }
+.triple-line span:nth-child(3) { width: 80px; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+@keyframes rotateSlow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(13, 27, 42, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 149, 106, 0.15);
+  transition: all 0.4s ease;
+}
+.nav.scrolled {
+  background: rgba(13, 27, 42, 0.98);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+.nav-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  position: relative;
+}
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.nav-logo a {
+  font-family: 'Tenor Sans', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.nav-logo .logo-year {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  color: var(--copper);
+}
+.nav-logo-line {
+  width: 60px;
+  height: 1px;
+  background: var(--copper);
+  margin: 4px auto 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  justify-content: center;
+}
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-links-left { margin-right: auto; }
+.nav-links-right { margin-left: auto; }
+.nav-link {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  transition: color 0.3s ease;
+  font-weight: 400;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--copper);
+  transition: width 0.3s ease;
+}
+.nav-link:hover { color: var(--copper); }
+.nav-link:hover::after { width: 100%; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--copper);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger span:nth-child(3) { bottom: 0; }
+.hamburger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+/* Geometric accent on hamburger */
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--copper);
+  transform: rotate(45deg);
+}
+.hamburger::before { left: -14px; top: 50%; margin-top: -3px; }
+.hamburger::after { right: -14px; top: 50%; margin-top: -3px; }
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 27, 42, 0.98);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.mobile-nav.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-nav a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  transition: color 0.3s ease;
+}
+.mobile-nav a:hover { color: var(--copper); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(27, 40, 56, 0.8) 0%, var(--navy-deep) 70%);
+}
+
+/* Geometric background pattern */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 98px,
+      var(--copper) 98px,
+      var(--copper) 100px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 98px,
+      var(--copper) 98px,
+      var(--copper) 100px
+    );
+}
+
+/* Rotating geometric ornament */
+.hero-ornament {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotateSlow 120s linear infinite;
+  opacity: 0.04;
+  pointer-events: none;
+}
+.hero-ornament::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--copper);
+  transform: rotate(45deg);
+}
+.hero-ornament::after {
+  content: '';
+  position: absolute;
+  inset: 60px;
+  border: 1px solid var(--copper);
+  transform: rotate(22.5deg);
+}
+
+/* Art Deco Frame Border */
+.hero-frame {
+  position: absolute;
+  inset: 30px;
+  pointer-events: none;
+}
+.hero-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(212, 149, 106, 0.15);
+}
+.hero-frame::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(212, 149, 106, 0.08);
+}
+
+/* Frame corners (stepped) */
+.hero-frame-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.hero-frame-corner::before,
+.hero-frame-corner::after {
+  content: '';
+  position: absolute;
+  background: var(--copper);
+}
+.hero-frame-corner--tl { top: -1px; left: -1px; }
+.hero-frame-corner--tl::before { top: 0; left: 0; width: 40px; height: 2px; }
+.hero-frame-corner--tl::after { top: 0; left: 0; width: 2px; height: 40px; }
+.hero-frame-corner--tr { top: -1px; right: -1px; }
+.hero-frame-corner--tr::before { top: 0; right: 0; width: 40px; height: 2px; }
+.hero-frame-corner--tr::after { top: 0; right: 0; width: 2px; height: 40px; }
+.hero-frame-corner--bl { bottom: -1px; left: -1px; }
+.hero-frame-corner--bl::before { bottom: 0; left: 0; width: 40px; height: 2px; }
+.hero-frame-corner--bl::after { bottom: 0; left: 0; width: 2px; height: 40px; }
+.hero-frame-corner--br { bottom: -1px; right: -1px; }
+.hero-frame-corner--br::before { bottom: 0; right: 0; width: 40px; height: 2px; }
+.hero-frame-corner--br::after { bottom: 0; right: 0; width: 2px; height: 40px; }
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease forwards;
+}
+.hero-pre {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 2rem;
+}
+.hero-title {
+  font-family: 'Tenor Sans', serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.hero-title span {
+  display: block;
+  font-size: 0.35em;
+  letter-spacing: 0.6em;
+  color: var(--copper);
+  margin-top: 0.8rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+.hero-subtitle {
+  font-family: 'Lora', serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  color: var(--copper-light);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 400;
+}
+.hero-location {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+.hero-sunburst {
+  position: relative;
+  width: 280px;
+  height: 80px;
+  margin: 2rem auto 0;
+  overflow: hidden;
+}
+.hero-sunburst::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  transform: translateX(-50%);
+  background: conic-gradient(
+    from 180deg at 50% 100%,
+    transparent 0deg,
+    rgba(212, 149, 106, 0.3) 1deg,
+    transparent 3deg,
+    transparent 10deg,
+    rgba(212, 149, 106, 0.25) 11deg,
+    transparent 13deg,
+    transparent 20deg,
+    rgba(212, 149, 106, 0.2) 21deg,
+    transparent 23deg,
+    transparent 30deg,
+    rgba(212, 149, 106, 0.25) 31deg,
+    transparent 33deg,
+    transparent 40deg,
+    rgba(212, 149, 106, 0.2) 41deg,
+    transparent 43deg,
+    transparent 50deg,
+    rgba(212, 149, 106, 0.15) 51deg,
+    transparent 53deg,
+    transparent 60deg,
+    rgba(212, 149, 106, 0.2) 61deg,
+    transparent 63deg,
+    transparent 70deg,
+    rgba(212, 149, 106, 0.25) 71deg,
+    transparent 73deg,
+    transparent 80deg,
+    rgba(212, 149, 106, 0.3) 81deg,
+    transparent 83deg,
+    transparent 90deg,
+    rgba(212, 149, 106, 0.35) 91deg,
+    transparent 93deg,
+    transparent 100deg,
+    rgba(212, 149, 106, 0.3) 101deg,
+    transparent 103deg,
+    transparent 110deg,
+    rgba(212, 149, 106, 0.25) 111deg,
+    transparent 113deg,
+    transparent 120deg,
+    rgba(212, 149, 106, 0.2) 121deg,
+    transparent 123deg,
+    transparent 130deg,
+    rgba(212, 149, 106, 0.25) 131deg,
+    transparent 133deg,
+    transparent 140deg,
+    rgba(212, 149, 106, 0.2) 141deg,
+    transparent 143deg,
+    transparent 150deg,
+    rgba(212, 149, 106, 0.15) 151deg,
+    transparent 153deg,
+    transparent 160deg,
+    rgba(212, 149, 106, 0.2) 161deg,
+    transparent 163deg,
+    transparent 170deg,
+    rgba(212, 149, 106, 0.25) 171deg,
+    transparent 173deg,
+    transparent 180deg
+  );
+  animation: gentlePulse 6s ease-in-out infinite;
+}
+.hero-sunburst::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 2s ease 1s both;
+}
+.scroll-indicator span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.scroll-indicator .scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--copper), transparent);
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* ===== SECTION STYLES ===== */
+section {
+  position: relative;
+}
+
+.section-navy { background: var(--navy-deep); }
+.section-navy-light { background: var(--navy); }
+.section-dark { background: #0a1520; }
+
+.section-padding {
+  padding: 8rem 0;
+}
+.section-padding-lg {
+  padding: 10rem 0;
+}
+
+/* ===== PROLOGUE ===== */
+.prologue {
+  padding: 10rem 0;
+  background: var(--navy-deep);
+  position: relative;
+}
+.prologue-inner {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+.prologue-text {
+  font-size: 1.15rem;
+  line-height: 2;
+  color: var(--text-body);
+  text-align: center;
+  font-style: italic;
+}
+.prologue-text strong {
+  color: var(--ivory);
+  font-weight: 500;
+}
+
+/* ===== HERITAGE / TIMELINE ===== */
+.heritage {
+  padding: 8rem 0;
+  background: var(--navy);
+  position: relative;
+}
+.heritage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--copper) 0px,
+    var(--copper) 20px,
+    transparent 20px,
+    transparent 30px
+  );
+  opacity: 0.3;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 4rem auto 0;
+  padding: 0 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--copper) 5%,
+    var(--copper) 95%,
+    transparent
+  );
+}
+.timeline-item {
+  position: relative;
+  padding: 2.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: start;
+  gap: 0;
+}
+.timeline-item:nth-child(odd) .timeline-content {
+  grid-column: 1;
+  text-align: right;
+  padding-right: 2rem;
+}
+.timeline-item:nth-child(odd) .timeline-marker {
+  grid-column: 2;
+}
+.timeline-item:nth-child(odd) .timeline-spacer {
+  grid-column: 3;
+}
+.timeline-item:nth-child(even) .timeline-spacer {
+  grid-column: 1;
+}
+.timeline-item:nth-child(even) .timeline-marker {
+  grid-column: 2;
+}
+.timeline-item:nth-child(even) .timeline-content {
+  grid-column: 3;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  grid-row: 1;
+}
+.timeline-marker .marker-diamond {
+  width: 14px;
+  height: 14px;
+  background: var(--copper);
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 2;
+}
+.timeline-marker .marker-diamond::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid var(--copper);
+  transform: rotate(0deg);
+  opacity: 0.4;
+}
+
+.timeline-year {
+  font-family: 'Tenor Sans', serif;
+  font-size: 1.6rem;
+  color: var(--copper);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+}
+.timeline-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--copper-light);
+  margin-bottom: 0.75rem;
+}
+.timeline-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-body);
+}
+.timeline-spacer { display: block; }
+
+/* ===== VENUE SECTIONS ===== */
+.venue-section {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.venue-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.venue-capacity {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 2rem;
+}
+.venue-desc {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.venue-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+  margin-top: 2.5rem;
+}
+.venue-feature {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--copper-light);
+  position: relative;
+  padding-left: 18px;
+}
+.venue-feature::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--copper);
+}
+.venue-quote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--copper-light);
+  margin-top: 3rem;
+  text-align: center;
+}
+.venue-quote::before,
+.venue-quote::after {
+  content: '"';
+  color: var(--copper);
+}
+.venue-quote::after { content: '"'; }
+
+/* Geometric Venue Frame */
+.venue-frame {
+  position: relative;
+  padding: 4rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.venue-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 10%,
+    var(--copper) 10%,
+    var(--copper) 15%,
+    transparent 15%,
+    transparent 42%,
+    var(--copper) 42%,
+    var(--copper) 58%,
+    transparent 58%,
+    transparent 85%,
+    var(--copper) 85%,
+    var(--copper) 90%,
+    transparent 90%,
+    transparent
+  );
+  opacity: 0.5;
+}
+.venue-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 10%,
+    var(--copper) 10%,
+    var(--copper) 15%,
+    transparent 15%,
+    transparent 42%,
+    var(--copper) 42%,
+    var(--copper) 58%,
+    transparent 58%,
+    transparent 85%,
+    var(--copper) 85%,
+    var(--copper) 90%,
+    transparent 90%,
+    transparent
+  );
+  opacity: 0.5;
+}
+
+/* ===== GRAND HALL ===== */
+.grand-hall {
+  background: var(--navy-deep);
+}
+.grand-hall .venue-section-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(212, 149, 106, 0.03) 0%, transparent 60%);
+}
+
+/* ===== VAULT ROOM ===== */
+.vault-room {
+  background: var(--navy);
+}
+.vault-room::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+
+/* ===== WEDDINGS ===== */
+.weddings {
+  background: var(--navy-deep);
+  position: relative;
+}
+.weddings::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+.weddings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wedding-feature {
+  text-align: center;
+  padding: 2rem;
+}
+.wedding-feature-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+.wedding-feature-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--copper);
+  transform: rotate(45deg);
+}
+.wedding-feature-icon::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--copper);
+  opacity: 0.4;
+  transform: rotate(45deg);
+}
+.wedding-feature h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+.wedding-feature p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===== HOTEL ===== */
+.hotel {
+  background: var(--navy);
+  position: relative;
+}
+.hotel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+.hotel-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hotel-feature {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid rgba(212, 149, 106, 0.1);
+  transition: border-color 0.3s ease;
+}
+.hotel-feature:hover {
+  border-color: rgba(212, 149, 106, 0.3);
+}
+.hotel-feature-number {
+  font-family: 'Tenor Sans', serif;
+  font-size: 2.5rem;
+  color: var(--copper);
+  margin-bottom: 0.5rem;
+}
+.hotel-feature h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+.hotel-feature p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ===== CONFERENCE & SPA ===== */
+.conf-spa {
+  background: var(--navy-deep);
+  position: relative;
+}
+.conf-spa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+.conf-spa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.conf-spa-divider {
+  width: 1px;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--copper) 20%,
+    var(--copper) 80%,
+    transparent
+  );
+  opacity: 0.3;
+}
+.conf-spa-col {
+  padding: 2rem;
+  text-align: center;
+}
+.conf-spa-col h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.conf-spa-col .section-label {
+  margin-bottom: 1.5rem;
+}
+.conf-spa-col p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ===== DISCOVER POTTSVILLE ===== */
+.discover {
+  background: var(--navy);
+  position: relative;
+}
+.discover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discover-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: rgba(13, 27, 42, 0.5);
+  border: 1px solid rgba(212, 149, 106, 0.1);
+  transition: all 0.4s ease;
+}
+.discover-card:hover {
+  border-color: rgba(212, 149, 106, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+/* Geometric card corners */
+.discover-card::before,
+.discover-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--copper);
+  border-style: solid;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.discover-card::before {
+  top: -1px; left: -1px;
+  border-width: 1px 0 0 1px;
+}
+.discover-card::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 1px 1px 0;
+}
+.discover-card:hover::before,
+.discover-card:hover::after { opacity: 0.8; }
+
+.discover-card h4 {
+  font-family: 'Tenor Sans', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+.discover-card .card-detail {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 1rem;
+  display: block;
+}
+.discover-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: var(--navy-deep);
+  position: relative;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--copper), transparent);
+  opacity: 0.3;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.contact-info {
+  padding: 2rem 0;
+}
+.contact-info-item {
+  margin-bottom: 2rem;
+}
+.contact-info-item .label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--copper);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.contact-info-item a,
+.contact-info-item p {
+  font-size: 1rem;
+  color: var(--ivory);
+  transition: color 0.3s ease;
+}
+.contact-info-item a:hover { color: var(--copper); }
+
+.contact-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.contact-social a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+.contact-social a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--copper);
+  transition: width 0.3s ease;
+}
+.contact-social a:hover { color: var(--copper); }
+.contact-social a:hover::after { width: 100%; }
+
+/* Contact Form */
+.contact-form {
+  padding: 2rem 0;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--copper);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(27, 40, 56, 0.5);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  color: var(--ivory);
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--copper);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23d4956a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+.form-group select option {
+  background: var(--navy);
+  color: var(--ivory);
+}
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--copper);
+  color: var(--copper);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--copper);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.btn:hover {
+  color: var(--navy-deep);
+}
+.btn:hover::before {
+  transform: translateY(0);
+}
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-solid {
+  background: var(--copper);
+  color: var(--navy-deep);
+}
+.btn-solid::before {
+  background: var(--copper-light);
+}
+.btn-solid:hover {
+  color: var(--navy-deep);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #070f18;
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 8px,
+      var(--copper) 8px,
+      var(--copper) 10px,
+      transparent 10px,
+      transparent 18px,
+      var(--copper) 18px,
+      var(--copper) 20px
+    );
+  opacity: 0.25;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.footer-logo {
+  font-family: 'Tenor Sans', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+.footer-newsletter {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  max-width: 400px;
+  width: 100%;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: rgba(27, 40, 56, 0.5);
+  border: 1px solid rgba(212, 149, 106, 0.2);
+  border-right: none;
+  color: var(--ivory);
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  outline: none;
+  border-radius: 0;
+}
+.footer-newsletter input:focus {
+  border-color: var(--copper);
+}
+.footer-newsletter input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.footer-newsletter button {
+  padding: 0.75rem 1.5rem;
+  background: var(--copper);
+  border: 1px solid var(--copper);
+  color: var(--navy-deep);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  white-space: nowrap;
+}
+.footer-newsletter button:hover {
+  background: var(--copper-light);
+  border-color: var(--copper-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(212, 149, 106, 0.08);
+}
+.footer-bottom p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+.footer-bottom .footer-tagline {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--copper);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ===== GEOMETRIC PATTERN BACKGROUNDS ===== */
+.geo-pattern-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  background-image:
+    linear-gradient(30deg, var(--copper) 12%, transparent 12.5%, transparent 87%, var(--copper) 87.5%, var(--copper)),
+    linear-gradient(150deg, var(--copper) 12%, transparent 12.5%, transparent 87%, var(--copper) 87.5%, var(--copper)),
+    linear-gradient(30deg, var(--copper) 12%, transparent 12.5%, transparent 87%, var(--copper) 87.5%, var(--copper)),
+    linear-gradient(150deg, var(--copper) 12%, transparent 12.5%, transparent 87%, var(--copper) 87.5%, var(--copper)),
+    linear-gradient(60deg, rgba(212,149,106,0.6) 25%, transparent 25.5%, transparent 75%, rgba(212,149,106,0.6) 75%, rgba(212,149,106,0.6)),
+    linear-gradient(60deg, rgba(212,149,106,0.6) 25%, transparent 25.5%, transparent 75%, rgba(212,149,106,0.6) 75%, rgba(212,149,106,0.6));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+/* ===== BOOKING BADGE ===== */
+.booking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--emerald);
+  color: var(--emerald-light);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.booking-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--emerald-light);
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .nav-links-left,
+  .nav-links-right {
+    gap: 1.5rem;
+  }
+  .nav-link {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline-item {
+    display: block;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .timeline::before {
+    left: 15px;
+  }
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 30px;
+    justify-content: center;
+  }
+  .timeline-spacer { display: none; }
+  .timeline-marker .marker-diamond {
+    width: 10px;
+    height: 10px;
+  }
+
+  .weddings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hotel-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .conf-spa-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .conf-spa-divider {
+    width: 200px;
+    height: 1px;
+    min-height: auto;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, var(--copper), transparent);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links-left,
+  .nav-links-right {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .nav-logo {
+    position: relative;
+    left: auto;
+    transform: none;
+  }
+  .nav-inner {
+    justify-content: center;
+  }
+
+  .hero-frame {
+    inset: 15px;
+  }
+  .hero-frame-corner {
+    width: 25px;
+    height: 25px;
+  }
+  .hero-frame-corner--tl::before,
+  .hero-frame-corner--tr::before,
+  .hero-frame-corner--bl::before,
+  .hero-frame-corner--br::before { width: 25px; }
+  .hero-frame-corner--tl::after,
+  .hero-frame-corner--tr::after,
+  .hero-frame-corner--bl::after,
+  .hero-frame-corner--br::after { height: 25px; }
+
+  .section-padding { padding: 5rem 0; }
+  .section-padding-lg { padding: 6rem 0; }
+  .prologue { padding: 6rem 0; }
+  .heritage { padding: 5rem 0; }
+  .venue-section { padding: 5rem 0; }
+  .venue-frame { padding: 2.5rem 1.5rem; }
+
+  .deco-corners { padding: 2rem; }
+  .deco-corners::before,
+  .deco-corners::after { width: 35px; height: 35px; }
+  .deco-corners .corner-bottom-left,
+  .deco-corners .corner-bottom-right { width: 35px; height: 35px; }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .discover-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  .container, .container-narrow {
+    padding: 0 1.25rem;
+  }
+  .hero-sunburst { width: 200px; }
+  .prologue-text { font-size: 1rem; }
+  .venue-features { flex-direction: column; align-items: center; }
+  .contact-social { flex-direction: column; gap: 1rem; }
+  .footer-newsletter {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-newsletter input {
+    border-right: 1px solid rgba(212, 149, 106, 0.2);
+    border-bottom: none;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .nav, .hamburger, .mobile-nav, .scroll-indicator { display: none !important; }
+  body { background: white; color: #333; }
+  * { color: #333 !important; border-color: #999 !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-links-left">
+      <a href="#heritage" class="nav-link">Heritage</a>
+      <a href="#grand-hall" class="nav-link">Grand Hall</a>
+      <a href="#vault" class="nav-link">Vault Room</a>
+      <a href="#weddings" class="nav-link">Weddings</a>
+    </div>
+    <div class="nav-logo">
+      <a href="#hero">
+        <span class="logo-year">Est.</span>
+        The Miners 1928
+        <div class="nav-logo-line"></div>
+      </a>
+    </div>
+    <div class="nav-links-right">
+      <a href="#hotel" class="nav-link">Hotel</a>
+      <a href="#conf-spa" class="nav-link">Conference</a>
+      <a href="#discover" class="nav-link">Discover</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#heritage" class="mobile-nav-link">Heritage</a>
+  <a href="#grand-hall" class="mobile-nav-link">Grand Hall</a>
+  <a href="#vault" class="mobile-nav-link">Vault Room</a>
+  <a href="#weddings" class="mobile-nav-link">Weddings</a>
+  <a href="#hotel" class="mobile-nav-link">Hotel</a>
+  <a href="#conf-spa" class="mobile-nav-link">Conference & Spa</a>
+  <a href="#discover" class="mobile-nav-link">Discover</a>
+  <a href="#contact" class="mobile-nav-link">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-frame">
+    <div class="hero-frame-corner hero-frame-corner--tl"></div>
+    <div class="hero-frame-corner hero-frame-corner--tr"></div>
+    <div class="hero-frame-corner hero-frame-corner--bl"></div>
+    <div class="hero-frame-corner hero-frame-corner--br"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-pre">Pottsville, Pennsylvania</p>
+    <h1 class="hero-title">
+      The Miners
+      <span>Nineteen Twenty-Eight</span>
+    </h1>
+    <div class="hero-sunburst"></div>
+    <p class="hero-subtitle">A Temple of Commerce Reborn</p>
+    <p class="hero-location">Luxury Hotel &amp; Grand Event Venue</p>
+  </div>
+  <div class="scroll-indicator">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== PROLOGUE ===== -->
+<section class="prologue" id="prologue">
+  <div class="prologue-inner deco-corners animate-on-scroll">
+    <span class="corner-bottom-left"></span>
+    <span class="corner-bottom-right"></span>
+    <div class="deco-arch"></div>
+    <p class="section-label text-center">Our Story</p>
+    <p class="prologue-text">
+      Some buildings are constructed. Others are composed. In 1927, architect <strong>Cass Gilbert</strong> &mdash; creator of the Woolworth Building and the United States Supreme Court &mdash; composed a masterpiece in brick, marble, and bronze for the coal country of eastern Pennsylvania. Nearly a century later, <strong>The Miners 1928</strong> invites you to experience that composition anew &mdash; as a luxury hotel, a grand event venue, and a living monument to the age that built America.
+    </p>
+    <div class="sunburst"></div>
+  </div>
+</section>
+
+<!-- ===== HERITAGE ===== -->
+<section class="heritage" id="heritage">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <p class="section-label">Heritage</p>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.15em; text-transform: uppercase;">A Century in the Making</h2>
+      <div class="deco-line"><span class="diamond"></span></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <!-- 1828 -->
+    <div class="timeline-item animate-on-scroll">
+      <div class="timeline-content">
+        <p class="timeline-year">1828</p>
+        <p class="timeline-heading">The Beginning</p>
+        <p class="timeline-text">
+          The Miners Bank opens October 28th, eight months after Pottsville becomes a borough. One of the first banks in the anthracite region. It predates Yuengling Brewery by a year.
+        </p>
+      </div>
+      <div class="timeline-marker"><div class="marker-diamond"></div></div>
+      <div class="timeline-spacer"></div>
+    </div>
+
+    <!-- 1830s-1920s -->
+    <div class="timeline-item animate-on-scroll">
+      <div class="timeline-spacer"></div>
+      <div class="timeline-marker"><div class="marker-diamond"></div></div>
+      <div class="timeline-content">
+        <p class="timeline-year">1830s&ndash;1920s</p>
+        <p class="timeline-heading">The Anthracite Era</p>
+        <p class="timeline-text">
+          Coal discovered on Sharp Mountain transforms the Schuylkill Valley. Irish, German, Welsh, and Eastern European immigrants arrive. Pottsville becomes the &ldquo;City of Firsts&rdquo; &mdash; first anthracite furnace, first Reading Railroad locomotive, first iron smelted with coal.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1927 -->
+    <div class="timeline-item animate-on-scroll">
+      <div class="timeline-content">
+        <p class="timeline-year">1927</p>
+        <p class="timeline-heading">Cass Gilbert's Masterwork</p>
+        <p class="timeline-text">
+          For the centennial, Cass Gilbert designs a masterwork. Harvard brick with four Doric columns of white Georgia marble. Keystones bearing Mercury, god of commerce, and Pluto, god of mines. Ten-foot brass doors by John Polachek depicting miners at work &mdash; his bronzes hang in the Smithsonian. The doors alone cost $10,000.
+        </p>
+      </div>
+      <div class="timeline-marker"><div class="marker-diamond"></div></div>
+      <div class="timeline-spacer"></div>
+    </div>
+
+    <!-- The Interior -->
+    <div class="timeline-item animate-on-scroll">
+      <div class="timeline-spacer"></div>
+      <div class="timeline-marker"><div class="marker-diamond"></div></div>
+      <div class="timeline-content">
+        <p class="timeline-year">The Interior</p>
+        <p class="timeline-heading">A Cathedral of Commerce</p>
+        <p class="timeline-text">
+          A 50-foot vaulted ceiling with glass and bronze skylight. Twelve grand chandeliers. Walls of Jeanne d'Arc French limestone. Floors of Roman travertine, from the same quarries as the Colosseum. Black walnut counters with green marble tops. Fourteen types of marble. A 36-ton vault door of tool-proof steel &mdash; 27 inches thick, 24 bolts, four time locks.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="timeline-item animate-on-scroll">
+      <div class="timeline-content">
+        <p class="timeline-year">2026</p>
+        <p class="timeline-heading">Reborn</p>
+        <p class="timeline-text">
+          Painstakingly restored to its original grandeur with modern luxury amenities woven seamlessly into the historic fabric. The Miners 1928 opens Spring 2026.
+        </p>
+      </div>
+      <div class="timeline-marker"><div class="marker-diamond"></div></div>
+      <div class="timeline-spacer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE GRAND HALL ===== -->
+<section class="venue-section grand-hall section-navy" id="grand-hall">
+  <div class="venue-section-bg"></div>
+  <div class="geo-pattern-bg"></div>
+  <div class="container text-center" style="position:relative; z-index:2;">
+    <div class="animate-on-scroll">
+      <p class="section-label">The Main Venue</p>
+      <h2 class="venue-title">The Grand Hall</h2>
+      <p class="venue-capacity">Capacity: 250 Guests</p>
+    </div>
+    <div class="venue-frame animate-on-scroll">
+      <p class="venue-desc">
+        The original 1928 banking lobby, now the most extraordinary event space in eastern Pennsylvania. Fifty-foot ceilings soar above your guests. The original glass and bronze skylight bathes the room in celestial light. A built-in bar anchors the far wall. State-of-the-art lighting and sound systems have been integrated without disturbing a single inch of historic detail.
+      </p>
+      <div class="venue-features">
+        <span class="venue-feature">Galas</span>
+        <span class="venue-feature">Corporate Events</span>
+        <span class="venue-feature">Celebrations</span>
+        <span class="venue-feature">Fundraisers</span>
+        <span class="venue-feature">Holiday Parties</span>
+        <span class="venue-feature">Built-in Bar</span>
+      </div>
+      <p class="venue-quote">No decorator alive can compete with Cass Gilbert.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE VAULT ROOM ===== -->
+<section class="venue-section vault-room" id="vault">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <p class="section-label">The Intimate Venue</p>
+      <h2 class="venue-title">The Vault Room</h2>
+      <p class="venue-capacity">250 Standing &nbsp;|&nbsp; 100 Seated</p>
+    </div>
+    <div class="venue-frame animate-on-scroll">
+      <p class="venue-desc">
+        Where a 36-ton vault door once guarded fortunes, now guards the most memorable evenings of your life. The Vault Room offers an intimate scale wrapped in the gravitas of a banking hall and the warmth of a private club. Perfect for gatherings that deserve more than ordinary.
+      </p>
+      <div class="venue-features">
+        <span class="venue-feature">Intimate Gatherings</span>
+        <span class="venue-feature">Bridal Showers</span>
+        <span class="venue-feature">Anniversaries</span>
+        <span class="venue-feature">Private Dinners</span>
+        <span class="venue-feature">Milestone Celebrations</span>
+      </div>
+      <div class="triple-line" style="margin-top:2.5rem;">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEDDINGS ===== -->
+<section class="weddings venue-section" id="weddings">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <div class="deco-arch"></div>
+      <p class="section-label">Celebrations of a Lifetime</p>
+      <h2 class="venue-title">Weddings</h2>
+      <div class="deco-line"><span class="diamond"></span></div>
+    </div>
+    <div class="animate-on-scroll">
+      <p class="venue-desc" style="margin-bottom: 1rem;">
+        Two magnificent spaces for ceremony, cocktail hour, and reception &mdash; all under one historic roof. Exchange vows beneath a century-old glass and bronze skylight. Dance in a room where marble, limestone, and light conspire to make every photograph extraordinary.
+      </p>
+      <p class="venue-quote" style="margin-top:1.5rem; margin-bottom: 0;">Begin your next chapter in a room built to last centuries.</p>
+    </div>
+
+    <div class="weddings-grid animate-on-scroll">
+      <div class="wedding-feature">
+        <div class="wedding-feature-icon"></div>
+        <h4>All-Inclusive Packages</h4>
+        <p>Transparent pricing with everything you need &mdash; catering, bar service, coordination &mdash; so you can focus on the celebration.</p>
+      </div>
+      <div class="wedding-feature">
+        <div class="wedding-feature-icon"></div>
+        <h4>Two Stunning Spaces</h4>
+        <p>The Grand Hall and The Vault Room offer distinct atmospheres for every moment, from an intimate ceremony to a grand reception.</p>
+      </div>
+      <div class="wedding-feature">
+        <div class="wedding-feature-icon"></div>
+        <h4>Hotel Accommodations</h4>
+        <p>Thirty to thirty-five luxury hotel rooms for your wedding party and guests. Everyone stays under one magnificent roof.</p>
+      </div>
+      <div class="wedding-feature">
+        <div class="wedding-feature-icon"></div>
+        <h4>Now Booking</h4>
+        <p>Securing dates for June 2026 onward. Begin planning your celebration in one of Pennsylvania's most remarkable buildings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOTEL ===== -->
+<section class="hotel section-padding" id="hotel">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <p class="section-label">Stay</p>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.15em; text-transform: uppercase;">The Hotel</h2>
+      <div class="deco-line"><span class="diamond"></span></div>
+      <p class="venue-desc" style="margin-top: 0;">
+        Thirty to thirty-five luxury rooms where historic character meets modern comfort. Every room is a conversation between 1928 craftsmanship and contemporary design &mdash; original architectural details, sumptuous furnishings, and every modern amenity you expect from a luxury hotel.
+      </p>
+    </div>
+
+    <div class="hotel-features animate-on-scroll">
+      <div class="hotel-feature">
+        <p class="hotel-feature-number">30-35</p>
+        <h4>Luxury Rooms</h4>
+        <p>Each uniquely appointed with period details and modern comforts</p>
+      </div>
+      <div class="hotel-feature">
+        <p class="hotel-feature-number" style="font-size:1.5rem; padding-top:0.5rem;">Spring</p>
+        <h4>Opening 2026</h4>
+        <p>Historic character meets contemporary luxury in downtown Pottsville</p>
+      </div>
+      <div class="hotel-feature">
+        <p class="hotel-feature-number" style="font-size:1.1rem; padding-top:0.7rem; line-height:1.4;">Walk to<br>Everything</p>
+        <h4>Downtown Location</h4>
+        <p>Yuengling Brewery, Mahantongo Street mansions, Schuylkill River Trail</p>
+      </div>
+    </div>
+
+    <div class="animate-on-scroll" style="margin-top: 3rem;">
+      <p style="font-size: 0.95rem; line-height: 1.8; max-width: 600px; margin: 0 auto;">
+        Walk to <strong style="color:var(--ivory);">Yuengling</strong> &mdash; America's oldest brewery, established 1829, offering free tours just blocks away. Explore the grand coal-baron mansions lining <strong style="color:var(--ivory);">Mahantongo Street</strong>. Hike or bike the <strong style="color:var(--ivory);">Schuylkill River Trail</strong>. This is a hotel rooted in a place worth exploring.
+      </p>
+      <div class="booking-badge" style="margin-top:2rem;">
+        <span class="dot"></span>
+        Opening Spring 2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONFERENCE & SPA ===== -->
+<section class="conf-spa section-padding" id="conf-spa">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <p class="section-label">Business & Wellness</p>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.15em; text-transform: uppercase;">Conference &amp; Spa</h2>
+      <div class="deco-line"><span class="diamond"></span></div>
+    </div>
+
+    <div class="conf-spa-grid animate-on-scroll">
+      <div class="conf-spa-col">
+        <h3>Conference</h3>
+        <p class="section-label">Meetings & Retreats</p>
+        <p>
+          State-of-the-art meeting spaces wrapped in French limestone and Roman travertine. Boardrooms and breakout rooms equipped with the latest technology, set within walls that have witnessed a century of important decisions. For conferences, retreats, and executive gatherings that demand an extraordinary setting.
+        </p>
+      </div>
+      <div class="conf-spa-divider"></div>
+      <div class="conf-spa-col">
+        <h3>Day Spa</h3>
+        <p class="section-label">Rest & Restoration</p>
+        <p>
+          Full-service wellness in a building dedicated to restoration. Our day spa offers a complete menu of treatments &mdash; massage, skincare, body work &mdash; in an atmosphere of unhurried luxury. Because a building this beautiful, restored this carefully, understands the value of renewal.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISCOVER POTTSVILLE ===== -->
+<section class="discover section-padding" id="discover">
+  <div class="container text-center">
+    <div class="animate-on-scroll">
+      <p class="section-label">Explore</p>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.15em; text-transform: uppercase;">Discover Pottsville</h2>
+      <p style="font-family:'Lora',serif; font-style:italic; color:var(--copper-light); margin-top:0.5rem; font-size:1.05rem;">The City of Firsts</p>
+      <div class="deco-line"><span class="diamond"></span></div>
+    </div>
+
+    <div class="discover-grid">
+      <div class="discover-card animate-on-scroll">
+        <h4>Yuengling Brewery</h4>
+        <span class="card-detail">Est. 1829 &bull; Free Tours</span>
+        <p>America's oldest operating brewery, founded just one year after the Miners Bank. Tour the historic brewery and taste the legacy, all within walking distance.</p>
+      </div>
+      <div class="discover-card animate-on-scroll">
+        <h4>Mahantongo Street</h4>
+        <span class="card-detail">Victorian Grandeur</span>
+        <p>A stunning boulevard of coal-baron mansions showcasing Victorian, Romanesque, and Queen Anne architecture &mdash; a living gallery of the region's gilded past.</p>
+      </div>
+      <div class="discover-card animate-on-scroll">
+        <h4>Schuylkill River Trail</h4>
+        <span class="card-detail">Hiking &amp; Cycling</span>
+        <p>Miles of scenic trail winding through the valley that coal built. Perfect for morning runs, afternoon hikes, and reconnecting with the landscape.</p>
+      </div>
+      <div class="discover-card animate-on-scroll">
+        <h4>Historical Society</h4>
+        <span class="card-detail">Schuylkill County</span>
+        <p>Dive deep into the anthracite story &mdash; the immigrants, the mines, the railroads, and the fortunes that shaped a nation's industrial rise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact section-padding" id="contact">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <p class="section-label">Get in Touch</p>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: 0.15em; text-transform: uppercase;">Contact</h2>
+      <div class="deco-line"><span class="diamond"></span></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info animate-on-scroll">
+        <div class="contact-info-item">
+          <span class="label">Telephone</span>
+          <a href="tel:+14123566981">(412) 356-6981</a>
+        </div>
+        <div class="contact-info-item">
+          <span class="label">Email</span>
+          <a href="mailto:hello@theminers1928.com">hello@theminers1928.com</a>
+        </div>
+        <div class="contact-info-item">
+          <span class="label">Location</span>
+          <p class="text-ivory">Pottsville, Pennsylvania 17901</p>
+        </div>
+        <div class="contact-social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+
+      <form class="contact-form animate-on-scroll" onsubmit="event.preventDefault();">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone">
+          </div>
+          <div class="form-group">
+            <label for="interest">Interest</label>
+            <select id="interest" name="interest">
+              <option value="" disabled selected>Select your interest</option>
+              <option value="wedding">Weddings</option>
+              <option value="corporate">Corporate Events</option>
+              <option value="private">Private Events</option>
+              <option value="hotel">Hotel Reservations</option>
+              <option value="conference">Conference</option>
+              <option value="spa">Day Spa</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your vision..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid"><span>Send Inquiry</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <p class="footer-logo">The Miners 1928</p>
+      <div class="triple-line">
+        <span></span><span></span><span></span>
+      </div>
+      <p style="font-family:'Josefin Sans',sans-serif; font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.5rem;">Subscribe to Our Newsletter</p>
+      <form class="footer-newsletter" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-tagline">A temple of commerce, reborn.</p>
+      <p>&copy; 2026 The Miners 1928. All rights reserved. Pottsville, Pennsylvania.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Navigation scroll effect ---
+  const nav = document.getElementById('nav');
+  let lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  // --- Hamburger menu ---
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+  });
+  // Close mobile nav on link click
+  document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // --- Scroll animations ---
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.1
+  };
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const navHeight = nav.offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

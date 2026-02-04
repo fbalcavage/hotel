@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Miners 1928 | Pottsville, Pennsylvania</title>
+<meta name="description" content="A luxury hotel and venue in a historic 1928 Cass Gilbert bank building in Pottsville, Pennsylvania. Opening Spring 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  color: #2c1810;
+  background-color: #f8f4ef;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+.font-heading {
+  font-family: 'Cormorant', 'Times New Roman', serif;
+}
+
+.font-body {
+  font-family: 'Crimson Pro', Georgia, serif;
+}
+
+.font-ui {
+  font-family: 'Outfit', 'Helvetica Neue', sans-serif;
+}
+
+/* ============================================
+   FADE-IN ANIMATION
+   ============================================ */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-slow {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.fade-in-slow.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(248, 244, 239, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+  transition: background-color 0.4s ease;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 2.5rem;
+}
+
+.nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #2c1810;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #3d2b1f;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #c8973e;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #c8973e;
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #2c1810;
+  transition: all 0.3s ease;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile menu */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f8f4ef;
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.nav-mobile.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-mobile a {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: #2c1810;
+  transition: color 0.3s ease;
+}
+
+.nav-mobile a:hover {
+  color: #c8973e;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    170deg,
+    #f8f4ef 0%,
+    #f3ede4 30%,
+    #ece5da 60%,
+    #e8dfd2 100%
+  );
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-title {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: #2c1810;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroFadeIn 1.6s ease 0.3s forwards;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title .hero-year {
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+  margin-top: 0.05em;
+}
+
+.hero-location {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #3d2b1f;
+  opacity: 0;
+  animation: heroFadeIn 1.4s ease 0.9s forwards;
+}
+
+.hero-opening {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c8973e;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: heroFadeIn 1.4s ease 1.3s forwards;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: heroFadeIn 1.4s ease 1.8s forwards;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(44, 24, 16, 0.3), transparent);
+  margin: 0 auto;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: scrollFadeIn 1.4s ease 1.8s forwards;
+}
+
+@keyframes scrollFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   IMAGE BANDS
+   ============================================ */
+
+.image-band {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-band-inner {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 320px;
+  max-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-band-inner.tall {
+  aspect-ratio: 16 / 9;
+}
+
+/* Placeholder styling for image bands */
+.image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.image-band-1 .image-placeholder {
+  background:
+    linear-gradient(135deg, #3d2b1f 0%, #5a4233 30%, #6b5344 50%, #4a3628 70%, #2c1810 100%);
+}
+
+.image-band-2 .image-placeholder {
+  background:
+    linear-gradient(160deg, #4a3628 0%, #6b5344 25%, #8b7460 50%, #5a4233 75%, #3d2b1f 100%);
+}
+
+.image-band-3 .image-placeholder {
+  background:
+    linear-gradient(145deg, #2c1810 0%, #4a3628 30%, #6b5a4a 55%, #3d2b1f 100%);
+}
+
+.image-band-4 .image-placeholder {
+  background:
+    linear-gradient(170deg, #5a4233 0%, #7a6552 30%, #6b5344 60%, #3d2b1f 100%);
+}
+
+/* ============================================
+   TEXT SECTIONS
+   ============================================ */
+
+.section {
+  padding: 8rem 2rem;
+}
+
+.section-lg {
+  padding: 10rem 2rem;
+}
+
+.section-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-medium {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   STORY SECTION
+   ============================================ */
+
+#story {
+  background-color: #f8f4ef;
+}
+
+.story-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c8973e;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.story-text {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.story-text p {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #3d2b1f;
+  margin-bottom: 1.8rem;
+  text-align: left;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.story-text p.story-opening {
+  font-size: 1.25rem;
+}
+
+.story-text p.story-opening::first-letter {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 4rem;
+  float: left;
+  line-height: 0.75;
+  margin-right: 0.1em;
+  margin-top: 0.12em;
+  color: #2c1810;
+}
+
+/* ============================================
+   SPACES SECTION
+   ============================================ */
+
+#spaces {
+  background-color: #f5efe7;
+}
+
+.section-heading {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #2c1810;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.space-block {
+  max-width: 640px;
+  margin: 0 auto 5rem auto;
+  text-align: center;
+}
+
+.space-block:last-child {
+  margin-bottom: 0;
+}
+
+.space-name {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #2c1810;
+  margin-bottom: 0.5rem;
+}
+
+.space-capacity {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c8973e;
+  margin-bottom: 1.5rem;
+}
+
+.space-description {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #3d2b1f;
+}
+
+.space-divider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(44, 24, 16, 0.12);
+  margin: 4rem auto;
+}
+
+/* ============================================
+   WEDDINGS SECTION
+   ============================================ */
+
+#weddings {
+  background-color: #f8f4ef;
+}
+
+.weddings-text {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #3d2b1f;
+}
+
+/* ============================================
+   STAY SECTION
+   ============================================ */
+
+#stay {
+  background-color: #f5efe7;
+}
+
+.stay-text {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #3d2b1f;
+}
+
+/* ============================================
+   CONNECT SECTION
+   ============================================ */
+
+#connect {
+  background-color: #f8f4ef;
+}
+
+.connect-info {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.connect-info p {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #3d2b1f;
+}
+
+.connect-info a {
+  transition: color 0.3s ease;
+}
+
+.connect-info a:hover {
+  color: #c8973e;
+}
+
+.connect-divider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(44, 24, 16, 0.12);
+  margin: 3.5rem auto;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(61, 43, 31, 0.5);
+  margin-bottom: 0.6rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #2c1810;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(44, 24, 16, 0.12);
+  transition: border-color 0.3s ease;
+  background-color: transparent;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(61, 43, 31, 0.25);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #c8973e;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.7;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.form-submit button {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f8f4ef;
+  background-color: #2c1810;
+  padding: 1rem 3rem;
+  transition: background-color 0.4s ease;
+}
+
+.form-submit button:hover {
+  background-color: #c8973e;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.social-links a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(61, 43, 31, 0.4);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #c8973e;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(44, 24, 16, 0.06);
+  background-color: #f8f4ef;
+}
+
+.footer-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(61, 43, 31, 0.35);
+  line-height: 2.2;
+}
+
+.footer-text span {
+  display: inline-block;
+  margin: 0 0.5rem;
+  opacity: 0.4;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  .nav-inner {
+    padding: 1rem 1.5rem;
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  .section-lg {
+    padding: 6rem 1.5rem;
+  }
+
+  .story-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .story-text p.story-opening {
+    font-size: 1.1rem;
+  }
+
+  .story-text p.story-opening::first-letter {
+    font-size: 3.2rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3.5rem;
+  }
+
+  .space-block {
+    margin-bottom: 3.5rem;
+  }
+
+  .space-divider {
+    margin: 3rem auto;
+  }
+
+  .image-band-inner {
+    min-height: 240px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-title {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 14vw, 5rem);
+  }
+
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-lg {
+    padding: 5rem 1.25rem;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+  }
+
+  .image-band-inner {
+    min-height: 200px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">The Miners 1928</a>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#spaces">Spaces</a></li>
+      <li><a href="#stay">Stay</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#story" onclick="closeMenu()">Story</a>
+  <a href="#spaces" onclick="closeMenu()">Spaces</a>
+  <a href="#stay" onclick="closeMenu()">Stay</a>
+  <a href="#connect" onclick="closeMenu()">Connect</a>
+</div>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+
+<section class="hero">
+  <h1 class="hero-title">
+    <span>The Miners</span>
+    <span class="hero-year">1928</span>
+  </h1>
+  <p class="hero-location">Pottsville, Pennsylvania</p>
+  <p class="hero-opening">Opening Spring 2026</p>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     IMAGE BAND 1
+     ============================================ -->
+
+<div class="image-band image-band-1">
+  <div class="image-band-inner">
+    <div class="image-placeholder">
+      <span class="image-placeholder-label">Exterior Photography</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     THE STORY
+     ============================================ -->
+
+<section id="story" class="section section-lg">
+  <div class="section-narrow">
+    <p class="story-label fade-in">The Story</p>
+    <div class="story-text">
+      <p class="story-opening fade-in">On a cool October morning in 1828, in a Pennsylvania borough barely eight months old, a bank opened its doors. The Miners Bank, they called it&thinsp;&mdash;&thinsp;a name that honored the men who were carving a fortune from the anthracite seams of Broad Mountain and the hills of the Schuylkill Valley.</p>
+
+      <p class="fade-in">For a century, the bank grew alongside Pottsville. It predated Yuengling, the brewery that would become America&rsquo;s oldest. It survived panics, depressions, and the slow transformation of a coal-powered nation into something new. Through it all, it remained the financial bedrock of a region.</p>
+
+      <p class="fade-in">Then came the centennial. The year was 1927, and the bank&rsquo;s directors decided to celebrate one hundred years with a building worthy of the occasion. They turned to Cass Gilbert&thinsp;&mdash;&thinsp;the architect who had given New York the Woolworth Building, then the tallest in the world, and who would go on to design the United States Supreme Court. What Gilbert created in Pottsville was neither skyscraper nor courthouse, but something equally remarkable: a cathedral of commerce, scaled to a small city but built with the materials and ambition of a nation&rsquo;s capital.</p>
+
+      <p class="fade-in">The exterior rose in Harvard brick, its facade anchored by four Doric columns hewn from white Georgia marble. Above the tall arched windows, carved keystones bore the faces of Mercury, god of trade, and Pluto, god of the deep earth&thinsp;&mdash;&thinsp;the twin spirits of a mining city. At the entrance, sculptor John Polachek cast ten-foot brass doors depicting miners at their labor. His work would later be collected by the Smithsonian. The doors cost ten thousand dollars&thinsp;&mdash;&thinsp;at a time when that sum could buy a house.</p>
+
+      <p class="fade-in">Inside, the building was even more extraordinary. The banking hall rose fifty feet to a vaulted ceiling crowned with a glass and bronze skylight. Twelve chandeliers hung from above, flooding the room with warm light. The walls were clad in Jeanne d&rsquo;Arc stone, a French limestone chosen for its subtle variation of color. The floors were laid with Roman travertine, quarried from the same Italian hillsides that had supplied the builders of the Colosseum two thousand years earlier. The counters were American black walnut, their surfaces topped with slabs of dark green marble. In all, fourteen distinct types of marble were used throughout the building. And behind the tellers stood the vault: a door weighing thirty-six tons, twenty-seven inches of tool-proof steel, secured by twenty-four bolts and four time locks.</p>
+
+      <p class="fade-in">The building served as the financial heart of Pottsville for nearly a century. Banks merged, names changed&thinsp;&mdash;&thinsp;Miners National became Heritage National, then Sovereign, then Santander. When the last bank closed its doors in 2023, the future of Cass Gilbert&rsquo;s masterpiece was uncertain.</p>
+
+      <p class="fade-in">It is uncertain no longer. The Miners 1928 is a careful, loving restoration of every surface, every detail, every material that Gilbert specified nearly a century ago&thinsp;&mdash;&thinsp;transformed into a luxury hotel and event destination for a new era. The travertine floors shine again. The skylight floods the grand hall with light once more. And those brass doors still open onto something extraordinary.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     IMAGE BAND 2
+     ============================================ -->
+
+<div class="image-band image-band-2">
+  <div class="image-band-inner tall">
+    <div class="image-placeholder">
+      <span class="image-placeholder-label">Interior &mdash; The Grand Hall</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     SPACES
+     ============================================ -->
+
+<section id="spaces" class="section section-lg">
+  <div class="section-medium">
+    <h2 class="section-heading fade-in">Spaces</h2>
+
+    <div class="space-block fade-in">
+      <h3 class="space-name">The Grand Hall</h3>
+      <p class="space-capacity">Capacity 250</p>
+      <p class="space-description">The original banking lobby. Fifty-foot ceilings. The skylight. Built-in bar. Modern lighting and sound. Galas, celebrations, corporate events.</p>
+    </div>
+
+    <div class="space-divider"></div>
+
+    <div class="space-block fade-in">
+      <h3 class="space-name">The Vault Room</h3>
+      <p class="space-capacity">250 standing &middot; 100 seated</p>
+      <p class="space-description">Intimate. Showers, anniversaries, private dinners. The thirty-six-ton vault door stands as a reminder of what this room once held&thinsp;&mdash;&thinsp;and still does.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     IMAGE BAND 3
+     ============================================ -->
+
+<div class="image-band image-band-3">
+  <div class="image-band-inner">
+    <div class="image-placeholder">
+      <span class="image-placeholder-label">Interior &mdash; The Vault Room</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     WEDDINGS
+     ============================================ -->
+
+<section id="weddings" class="section section-lg">
+  <div class="section-narrow">
+    <h2 class="section-heading fade-in">Weddings</h2>
+    <div class="weddings-text fade-in">
+      <p>Two spaces. One extraordinary building. Exchange vows beneath the skylight. Celebrate in the Grand Hall. Keep everyone close in thirty-five hotel rooms upstairs. All-inclusive packages. Now booking June 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STAY
+     ============================================ -->
+
+<section id="stay" class="section section-lg">
+  <div class="section-narrow">
+    <h2 class="section-heading fade-in">Stay</h2>
+    <div class="stay-text fade-in">
+      <p>Thirty-five rooms where historic craftsmanship meets thoughtful modern comfort. Walk to Yuengling. Explore the Victorian mansions of Mahantongo Street. Follow the Schuylkill River Trail. Opening Spring 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     IMAGE BAND 4
+     ============================================ -->
+
+<div class="image-band image-band-4">
+  <div class="image-band-inner">
+    <div class="image-placeholder">
+      <span class="image-placeholder-label">Hotel Rooms</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     CONNECT
+     ============================================ -->
+
+<section id="connect" class="section section-lg">
+  <div class="section-narrow">
+    <h2 class="section-heading fade-in">Connect</h2>
+
+    <div class="connect-info fade-in">
+      <p><a href="tel:+15705551928">(570) 555-1928</a></p>
+      <p><a href="mailto:hello@theminers1928.com">hello@theminers1928.com</a></p>
+      <p>201 North Centre Street<br>Pottsville, Pennsylvania 17901</p>
+    </div>
+
+    <div class="connect-divider"></div>
+
+    <form class="contact-form fade-in" onsubmit="return false;">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="How can we help?"></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+
+    <div class="social-links fade-in">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+
+<footer>
+  <p class="footer-text">
+    The Miners 1928<span>|</span>Pottsville, Pennsylvania
+    <br>
+    &copy; 2026 The Miners 1928. All rights reserved.
+  </p>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+
+<script>
+// Fade-in on scroll
+(function() {
+  const fadeEls = document.querySelectorAll('.fade-in, .fade-in-slow');
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  fadeEls.forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+
+// Mobile menu
+function toggleMenu() {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const menu = document.getElementById('mobileMenu');
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+
+function closeMenu() {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const menu = document.getElementById('mobileMenu');
+  hamburger.classList.remove('active');
+  menu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Subtle nav background change on scroll
+(function() {
+  const nav = document.querySelector('nav');
+  let ticking = false;
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        if (window.scrollY > 100) {
+          nav.style.backgroundColor = 'rgba(248, 244, 239, 0.97)';
+        } else {
+          nav.style.backgroundColor = 'rgba(248, 244, 239, 0.92)';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
