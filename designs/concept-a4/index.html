@@ -1090,9 +1090,8 @@
         }
 
         .dining__image-label {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
+            position: relative;
+            display: block;
             z-index: 2;
             font-family: var(--font-body);
             font-size: 0.65rem;
@@ -2465,8 +2464,10 @@
                     </p>
                 </div>
 
-                <div class="dining__image reveal reveal-right" aria-label="The Grand Hall Bar" style="height: auto; aspect-ratio: 3/2; max-height: 80vh;">
-                    <img src="../../images/GarnetDahlia-6071.JPG" alt="Couple in The Grand Hall surrounded by limestone arches and tables set for a reception" style="object-position: center center;">
+                <div class="reveal reveal-right">
+                    <div class="dining__image" style="height: auto; aspect-ratio: 3/2; max-height: 80vh;">
+                        <img src="../../images/GarnetDahlia-6071.JPG" alt="Couple in The Grand Hall surrounded by limestone arches and tables set for a reception" style="object-position: center center;">
+                    </div>
                     <span class="dining__image-label">The Grand Hall Bar &mdash; Opening Spring 2026</span>
                 </div>
             </div>
