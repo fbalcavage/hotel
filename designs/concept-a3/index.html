@@ -1269,6 +1269,41 @@
         }
 
         /* ============================================================
+           REAL IMAGES
+           ============================================================ */
+        .image-real {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .image-container-full {
+            height: 550px;
+        }
+
+        .image-container-half {
+            height: 400px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ============================================================
            UTILITY
            ============================================================ */
         .text-center { text-align: center; }
@@ -1355,16 +1390,22 @@
                 gap: 40px;
             }
 
-            .image-grid .image-placeholder {
+            .image-grid .image-placeholder,
+            .image-grid .image-container {
                 height: 300px;
             }
 
-            .image-full {
+            .image-full,
+            .image-container-full {
                 height: 400px;
             }
 
             .image-hero-full {
                 height: 420px;
+            }
+
+            .image-container-half {
+                height: 300px;
             }
         }
 
@@ -1404,16 +1445,26 @@
                 grid-template-columns: 1fr;
             }
 
-            .image-grid .image-placeholder {
+            .image-grid .image-placeholder,
+            .image-grid .image-container {
                 height: 300px;
             }
 
-            .image-full {
+            .image-full,
+            .image-container-full {
                 height: 320px;
             }
 
             .image-hero-full {
                 height: 350px;
+            }
+
+            .image-container-full {
+                height: 350px;
+            }
+
+            .image-container-half {
+                height: 280px;
             }
 
             .image-section-padded {
@@ -1483,7 +1534,8 @@
                 font-size: 0.65rem;
             }
 
-            .image-full {
+            .image-full,
+            .image-container-full {
                 height: 250px;
             }
 
@@ -1491,7 +1543,16 @@
                 height: 280px;
             }
 
-            .image-grid .image-placeholder {
+            .image-container-full {
+                height: 260px;
+            }
+
+            .image-container-half {
+                height: 220px;
+            }
+
+            .image-grid .image-placeholder,
+            .image-grid .image-container {
                 height: 220px;
             }
 
@@ -1584,8 +1645,8 @@
          ============================================================ -->
     <!-- PHOTO: PRIMARY — The Grand Hall interior set up for a wedding, showing the 50-foot ceiling, skylight, chandeliers, and full venue -->
     <div class="image-section">
-        <div class="image-placeholder image-hero-full reveal">
-            <span>Primary photo &mdash; The Grand Hall interior set for a wedding (the real wow factor)</span>
+        <div class="image-container image-container-full reveal" style="height: 550px;">
+            <img src="../../images/GarnetDahlia-1375.JPG" alt="The Grand Hall at The Miners 1928, set for a wedding reception with tables, chandeliers, and the massive vault door visible in the background" loading="eager">
         </div>
     </div>
 
@@ -1632,8 +1693,8 @@
         <div class="image-section-padded">
             <div class="image-grid reveal">
                 <!-- PHOTO: The lobby/entrance with brass doors -->
-                <div class="image-placeholder">
-                    <span>The lobby entrance with ten-foot brass doors</span>
+                <div class="image-container image-container-half">
+                    <img src="../../images/GarnetDahlia-1279.JPG" alt="Couple popping champagne at the famous ten-foot brass Polachek entrance doors of The Miners 1928" loading="lazy">
                 </div>
                 <!-- PHOTO: Looking up at the 50-foot ceiling and skylight -->
                 <div class="image-placeholder">
@@ -1751,8 +1812,8 @@
     <!-- PHOTO: The Bridal Suite — spacious, elegant, with getting-ready area -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-placeholder image-full reveal">
-                <span>The Bridal Suite &mdash; spacious, elegant, with getting-ready area</span>
+            <div class="image-container image-container-full reveal">
+                <img src="../../images/R93hvQce-Modern-Moments.webp" alt="The bridal getting-ready room at The Miners 1928 with exposed brick walls, industrial-chic ceiling, modern furnishings, and natural light" loading="lazy">
             </div>
         </div>
     </div>
@@ -1871,8 +1932,8 @@
     <!-- PHOTO: The Grand Hall set up for an event, showing the full ceiling height, skylight, and chandeliers -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-placeholder image-full reveal">
-                <span>The Grand Hall set for an event &mdash; full ceiling height, skylight, and chandeliers</span>
+            <div class="image-container image-container-full reveal">
+                <img src="../../images/GarnetDahlia-6074.JPG" alt="Bride and groom standing in The Grand Hall with towering limestone arches and columns, ceiling height visible, tables set around them" loading="lazy">
             </div>
         </div>
     </div>
@@ -1884,12 +1945,12 @@
         <div class="image-section-padded">
             <div class="image-grid reveal">
                 <!-- PHOTO: Grand Hall from the mezzanine level -->
-                <div class="image-placeholder">
-                    <span>Grand Hall from the mezzanine level</span>
+                <div class="image-container image-container-half">
+                    <img src="../../images/GarnetDahlia-1372.JPG" alt="The Grand Hall viewed from above on the mezzanine level, showing the full venue layout, herringbone floors, limestone walls, and massive scale" loading="lazy">
                 </div>
                 <!-- PHOTO: Grand Hall detail — limestone walls and marble -->
-                <div class="image-placeholder">
-                    <span>Grand Hall detail &mdash; limestone walls and marble</span>
+                <div class="image-container image-container-half">
+                    <img src="../../images/GarnetDahlia-0005.JPG" alt="Close-up of wedding table setup in The Grand Hall with gold chiavari chairs, tall gold floral centerpieces, limestone walls with arched details, and uplighting" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1951,8 +2012,8 @@
     <!-- PHOTO: The Grand Hall set for a wedding reception -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-placeholder image-full reveal">
-                <span>The Grand Hall set for a wedding reception</span>
+            <div class="image-container image-container-full reveal">
+                <img src="../../images/GarnetDahlia-0201.JPG" alt="Bride and groom in The Grand Hall, groom kissing bride's hand, with massive limestone walls, tables set up, and dramatic uplighting behind them" loading="lazy">
             </div>
         </div>
     </div>
@@ -2027,13 +2088,13 @@
     <div class="image-section">
         <div class="image-section-padded">
             <div class="image-grid reveal">
-                <!-- PHOTO: Boardroom detail — historic features -->
-                <div class="image-placeholder">
-                    <span>Boardroom detail &mdash; historic features</span>
+                <!-- PHOTO: Boardroom detail — bride on the mezzanine balcony -->
+                <div class="image-container image-container-half">
+                    <img src="../../images/GarnetDahlia-6244.JPG" alt="Bride on the mezzanine balcony overlooking the venue, with iron railing, dark marble columns, and arched window above" loading="lazy">
                 </div>
                 <!-- PHOTO: View from the Boardroom overlooking the venue below -->
-                <div class="image-placeholder">
-                    <span>View from the Boardroom overlooking the venue below</span>
+                <div class="image-container image-container-half">
+                    <img src="../../images/GarnetDahlia-1372.JPG" alt="View from the boardroom level overlooking The Grand Hall below, showing the full venue layout and scale of the space" loading="lazy">
                 </div>
             </div>
         </div>
