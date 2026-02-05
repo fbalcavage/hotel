@@ -1288,6 +1288,11 @@
             height: 550px;
         }
 
+        .image-container-portrait {
+            height: 85vh;
+            max-height: 900px;
+        }
+
         .image-container-half {
             height: 400px;
         }
@@ -1298,6 +1303,10 @@
             object-fit: cover;
             object-position: center 60%;
             transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .image-container-portrait img {
+            object-position: center center;
         }
 
         .image-container:hover img {
@@ -1401,6 +1410,11 @@
                 height: 400px;
             }
 
+            .image-container-portrait {
+                height: 75vh;
+                max-height: 700px;
+            }
+
             .image-hero-full {
                 height: 420px;
             }
@@ -1454,6 +1468,11 @@
             .image-full,
             .image-container-full {
                 height: 320px;
+            }
+
+            .image-container-portrait {
+                height: 70vh;
+                max-height: 550px;
             }
 
             .image-hero-full {
@@ -1538,6 +1557,11 @@
             .image-full,
             .image-container-full {
                 height: 250px;
+            }
+
+            .image-container-portrait {
+                height: 65vh;
+                max-height: 450px;
             }
 
             .image-hero-full {
@@ -1933,7 +1957,7 @@
     <!-- PHOTO: The Grand Hall set up for an event, showing the full ceiling height, skylight, and chandeliers -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-container image-container-full reveal">
+            <div class="image-container image-container-portrait reveal">
                 <img src="../../images/GarnetDahlia-6074.JPG" alt="Bride and groom standing in The Grand Hall with towering limestone arches and columns, ceiling height visible, tables set around them" loading="lazy">
             </div>
         </div>
@@ -2013,7 +2037,7 @@
     <!-- PHOTO: The Grand Hall set for a wedding reception -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-container image-container-full reveal">
+            <div class="image-container image-container-portrait reveal">
                 <img src="../../images/GarnetDahlia-0201.JPG" alt="Bride and groom in The Grand Hall, groom kissing bride's hand, with massive limestone walls, tables set up, and dramatic uplighting behind them" loading="lazy">
             </div>
         </div>
