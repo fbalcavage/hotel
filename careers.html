@@ -531,6 +531,65 @@
         }
 
         /* ============================================================
+           REGISTRATION FORM
+           ============================================================ */
+        .registration {
+            background: var(--black);
+            padding: 0 0 var(--section-padding);
+        }
+
+        .registration__header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .registration__wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .registration__frame {
+            border: 1px solid rgba(201, 169, 110, 0.15);
+            overflow: hidden;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .registration__frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--gold));
+            z-index: 1;
+        }
+
+        .registration__frame iframe {
+            display: block;
+            width: 100%;
+            min-height: 1100px;
+            border: none;
+        }
+
+        .registration__alt {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .registration__alt p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .registration__alt a {
+            color: var(--gold);
+            text-underline-offset: 3px;
+        }
+
+        /* ============================================================
            POSITIONS
            ============================================================ */
         .positions {
@@ -855,6 +914,7 @@
             .job-fair__dates { grid-template-columns: 1fr; max-width: 400px; }
 
             .footer__top { grid-template-columns: 1fr; gap: 40px; }
+            .registration__frame iframe { min-height: 1150px; }
         }
 
         @media (max-width: 768px) {
@@ -1028,9 +1088,42 @@
             </div>
 
             <div class="apply__cta reveal">
-                <!-- TODO: Replace # with your Google Form URL -->
-                <a href="#" class="btn btn--filled" id="registerBtn">Register for Job Fair</a>
+                <a href="#register" class="btn btn--filled" id="registerBtn">Register for Job Fair</a>
                 <a href="./documents/Miners-Hotel-Employment-Application.pdf" class="btn" download>Download Application</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         REGISTRATION FORM
+         ============================================================ -->
+    <section class="registration" id="register">
+        <div class="container">
+            <div class="registration__header reveal">
+                <span class="section-label">Step One</span>
+                <h2>Register Online</h2>
+                <div class="gold-rule"></div>
+                <p style="max-width: 600px; margin: 0 auto;">
+                    Complete the form below to register for our upcoming job fair.
+                    We look forward to meeting you.
+                </p>
+            </div>
+
+            <div class="registration__wrapper reveal">
+                <div class="registration__frame">
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdUknG5hIQrik0qP2TREggogbcUe4EMhZorNZ_1af_GrjecQg/viewform?embedded=true"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Job Fair Registration Form"
+                        loading="lazy">
+                        Loading&hellip;
+                    </iframe>
+                </div>
+                <div class="registration__alt">
+                    <p>Having trouble? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUknG5hIQrik0qP2TREggogbcUe4EMhZorNZ_1af_GrjecQg/viewform" target="_blank" rel="noopener">Open the form in a new tab &rarr;</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -1132,8 +1225,7 @@
                     we encourage you to register and attend.
                 </p>
                 <div style="margin-top: 40px;">
-                    <!-- TODO: Replace # with your Google Form URL -->
-                    <a href="#" class="btn btn--filled">Register for Job Fair</a>
+                    <a href="#register" class="btn btn--filled">Register for Job Fair</a>
                 </div>
             </div>
         </div>
