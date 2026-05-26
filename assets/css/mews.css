@@ -1,0 +1,409 @@
+html {
+    overflow: visible !important;
+}
+body {
+    overflow: visible !important;
+}
+iframe.mews-distributor {
+    width: 70% !important;
+    box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -moz-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    margin-top: 2% !important;
+    height: 98% !important;
+    transform: translateX(20%) !important;
+    border: 1px solid rgb(229, 229, 229, 1) !important;
+}
+
+.form-control[readonly] {
+    background-color: white;
+}
+/*form#date-form {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -4em;
+    padding: 1em;
+    background-color: #f0f2e9;
+    border-radius: 8px;
+}
+.form-field {
+    float: left;
+    margin-right: 0.5rem;
+}*/
+/* ***************** */
+select#selectlocation, select#adultos {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* SVG background image */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%2334566F%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%2334566F%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-size: .6em;
+      background-position: calc(100% - 0.8em) center;
+      background-repeat: no-repeat;
+  }
+  select#selectlocation::-ms-expand,
+  , select#adultos::-ms-expand {
+      display: none;
+  }
+  /* *************** */
+
+select#selectlocation, input#calendar-range, input.calendar-input, 
+select#adultos, input#vouchercode, input#availability{
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    border-color: #34566F;
+    color: #34566F;
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    form#date-form {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        top: 0em;
+    }
+    .form-field {
+        float: none;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+    select#selectlocation, input#calendar-range, input.calendar-input,
+    select#adultos, input#vouchercode {
+        max-width: 100%;
+    }
+    input#availability {
+        min-width: 100%;
+    }
+    iframe.mews-distributor {
+        width: 100% !important;
+        margin-top: 15% !important;
+        transform: translate(0%, 0%) !important;
+    }
+}
+
+
+/* ============================================================
+   HERO BOOKING BAR
+   ============================================================ */
+.booking-bar {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 12px 10px 22px;
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    background: rgba(15, 25, 23, 0.42);
+    border: 1px solid color-mix(in srgb, var(--gold), transparent 65%);
+    border-radius: 10px;
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 1px 0 rgba(240, 230, 204, 0.06) inset;
+    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    color: #f0e6cc;
+    opacity: 0;
+    animation: bookingBarIn 1s cubic-bezier(0.23, 1, 0.32, 1) 1.6s forwards;
+}
+
+@keyframes bookingBarIn {
+    from { opacity: 0; transform: translate(-50%, 20px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.booking-bar__field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 18px;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-bar__field--suite {
+    flex: 1.4 1 0;
+}
+
+.booking-bar__field:hover {
+    background-color: color-mix(in srgb, var(--gold), transparent 80%);
+    
+}
+
+.booking-bar__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.booking-bar__field-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1 1 auto;
+    line-height: 1.2;
+}
+
+.booking-bar__sub {
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.booking-bar__control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.02rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    line-height: 1.2;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*.booking-bar__control::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.booking-bar__icon {
+    pointer-events: none;
+}*/
+
+.booking-bar__control:focus {
+    color: var(--cream);
+}
+
+.booking-bar__control::placeholder {
+    color: color-mix(in srgb, var(--gold-pale), transparent 50%);
+}
+
+/* Hide the native calendar icon next to <input type="date"> */
+.booking-bar__control[type="date"]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.booking-bar__control[type="date"]::-webkit-inner-spin-button,
+.booking-bar__control[type="date"]::-webkit-clear-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+/* Make the custom SVG icon clickable for fields that open a picker (date inputs) */
+.booking-bar__field:has(input[type="date"]) .booking-bar__icon {
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+.booking-bar__field:has(input[type="date"]) .booking-bar__icon:hover {
+    color: var(--gold-light);
+}
+
+/*select.booking-bar__control {
+    padding-right: 16px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23c9a96e' d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 9px;
+}
+
+select.booking-bar__control option {
+    background-color: var(--charcoal);
+    color: var(--cream);
+}*/
+
+.booking-bar__divider {
+    width: 1px;
+    align-self: stretch;
+    margin: 6px 0;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        color-mix(in srgb, var(--gold-pale), transparent 80%) 30%,
+        color-mix(in srgb, var(--gold), transparent 40%) 70%,
+        transparent 100%
+    );
+    flex-shrink: 0;
+}
+
+
+.booking-bar__sparkle {
+    align-self: center;
+    margin-left: 14px;
+    margin-right: 4px;
+    color:  var(--gold);
+    font-size: 1.05rem;
+    line-height: 1;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* --- Stepper (Adults / Children) --- */
+.booking-bar__value {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.02rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    line-height: 1.2;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.booking-bar__stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.booking-bar__step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 18px;
+    padding: 0;
+    border: 1px solid color-mix(in srgb, var(--gold), transparent 60%);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--gold);
+    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.booking-bar__step:hover {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    border-color: var(--gold);
+}
+
+.booking-bar__step:focus-visible {
+    outline: 1px solid var(--gold-light);
+    outline-offset: 2px;
+}
+
+.booking-bar__step.is-disabled,
+.booking-bar__step[aria-disabled="true"] {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* --- Tablet: tighten spacing --- */
+@media (max-width: 1024px) {
+    .booking-bar {
+        width: calc(100% - 40px);
+        padding: 8px 12px 8px 16px;
+    }
+    .booking-bar__field {
+        padding: 6px 12px;
+        gap: 10px;
+    }
+    .booking-bar__control {
+        font-size: 0.95rem;
+    }
+    .booking-bar__submit {
+        padding: 0 22px;
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+    }
+    .booking-bar__hint {
+        display: none;
+    }
+}
+
+/* --- Mobile: stack vertically --- */
+@media (max-width: 768px) {
+    .booking-bar {
+        display: none;
+        /*position: relative;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: calc(100% - 40px);
+        margin: -40px auto 40px;
+        padding: 18px;
+        gap: 4px;
+        animation: book*/ingBarInMobile 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards;
+    }
+    /*@keyframes bookingBarInMobile {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    .booking-bar__field,
+    .booking-bar__field--suite {
+        flex: 1 1 auto;
+        padding: 10px 6px;
+    }
+    .booking-bar__divider {
+        width: auto;
+        height: 1px;
+        margin: 0 6px;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(201, 169, 110, 0.35) 50%,
+            transparent 100%
+        );
+    }
+    .booking-bar__sparkle {
+        display: none;
+    }*/
+}
