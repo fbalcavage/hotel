@@ -245,8 +245,15 @@
 
 .feature-split--reverse .feature-split__media { order: 2; }
 
-/* top-align columns (for two text columns of different lengths) */
-.feature-split--top { align-items: start; }
+/* top-align columns (for two text columns of different lengths) and
+   center the block so the bare-text pair reads as a balanced, centered unit
+   rather than stretching the full container width and looking left-shifted */
+.feature-split--top {
+    align-items: start;
+    max-width: 880px;
+    margin: 0 auto;
+    gap: 80px;
+}
 
 .feature-split__media img {
     width: 100%;
