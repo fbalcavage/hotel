@@ -1763,11 +1763,15 @@ p {
     background: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    z-index: 999;
+    z-index: 1001;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 22px;
+    padding: 20px 24px 48px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
@@ -1784,6 +1788,9 @@ p {
     font-weight: 300;
     color: var(--cream);
     letter-spacing: 0.08em;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .mobile-menu a:hover {
@@ -1791,15 +1798,18 @@ p {
 }
 
 .mobile-menu__close {
-    position: absolute;
-    top: 28px;
-    right: 40px;
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+    z-index: 2;
     background: none;
     border: none;
     color: var(--cream);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 1;
     cursor: pointer;
-    padding: 8px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
     font-family: var(--font-body);
     font-weight: 200;
 }
