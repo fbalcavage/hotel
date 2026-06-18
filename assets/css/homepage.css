@@ -625,7 +625,7 @@ p {
 
 .intro__preheading {
     font-family: var(--font-subheading);
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
     font-weight: 300;
     font-style: italic;
     color: var(--gold);
