@@ -248,10 +248,10 @@
 
     /* --- Photo-spot reference tags ---------------------------------------
        Draws a numbered tag over every photo location (data-photo="...") so a
-       spot can be referenced by code, e.g. WED-3. ON for the whole site while
-       we gather photos. To hide them, add ?photos=off to the address.
+       spot can be referenced by code, e.g. WED-3. OFF by default for a clean
+       site; add ?photos (or ?photos=on) to the address to show them.
        See photo-spots.js / PHOTO-CHECKLIST.md. */
-    var photosOn = !/[?&]photos=off\b/.test(window.location.search);
+    var photosOn = /[?&]photos(=on)?(&|$)/.test(window.location.search);
     var spots = photosOn ? document.querySelectorAll('[data-photo]') : [];
     if (spots.length) {
         var layer = document.createElement('div');
