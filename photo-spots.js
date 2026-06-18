@@ -39,7 +39,10 @@ const PAGES = {
 };
 
 // images that are part of the layout, not content photos — never numbered
-const SKIP_IMAGES = new Set(['the_miners_logo.png', 'favicon.svg', 'MENU-1.PNG', 'MENU-2.PNG']);
+const SKIP_IMAGES = new Set(['the_miners_logo.png', 'favicon.svg']);
+
+// menu page images (MENU-*) are content, but not "photo spots" to be sourced
+const SKIP_PATTERN = /^MENU-/i;
 
 // human-friendly page titles for the checklist
 const TITLES = {
@@ -116,8 +119,11 @@ for (const [page, prefix] of Object.entries(PAGES)) {
       return m;
     }
 
-    if (imgTag && SKIP_IMAGES.has(basename(attr(imgTag, 'src')))) {
-      return strip(imgTag); // layout image (logo etc.) — clear any old code, don't number
+    if (imgTag) {
+      const imgBase = basename(attr(imgTag, 'src'));
+      if (SKIP_IMAGES.has(imgBase) || SKIP_PATTERN.test(imgBase)) {
+        return strip(imgTag); // layout image (logo etc.) or menu page — don't number
+      }
     }
 
     n += 1;

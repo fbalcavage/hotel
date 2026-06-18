@@ -601,6 +601,10 @@
     transition: border-color var(--transition-smooth);
 }
 
+/* A landscape menu page (e.g. the café drinks menu) spans the full row,
+   sitting above the portrait food-menu pages. */
+.menu-page--wide { grid-column: 1 / -1; }
+
 .menu-page img {
     width: 100%;
     height: auto;
