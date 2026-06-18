@@ -190,11 +190,34 @@
     position: relative;
     z-index: 2;
     max-width: 820px;
+    isolation: isolate;
+}
+
+/* Soft feathered "frosted halo" behind the hero copy — keeps text
+   legible over the photo without a hard panel edge (matches the home
+   page hero). Applies to every interior page that uses .page-hero. */
+.page-hero__content::before {
+    content: '';
+    position: absolute;
+    inset: -10% -8%;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(6, 9, 8, 0.62) 0%,
+        rgba(6, 9, 8, 0.38) 45%,
+        transparent 72%
+    );
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    -webkit-mask: radial-gradient(ellipse at center, #000 0%, #000 42%, transparent 72%);
+    mask: radial-gradient(ellipse at center, #000 0%, #000 42%, transparent 72%);
+    pointer-events: none;
 }
 
 .page-hero__title {
     color: var(--cream);
     margin: 10px 0 18px;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
 }
 
 .page-hero__sub {
