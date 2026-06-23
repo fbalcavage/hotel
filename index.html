@@ -124,7 +124,7 @@
          ============================================================ -->
     <section class="hero" id="home">
         <div class="hero__bg" aria-hidden="true">
-            <img data-photo="HOME-1" src="./images/venue-aerial-4.jpg" alt="An elevated view of the grand banking hall at The Miners 1928, set for an event">
+            <img data-photo="HOME-1" src="./images/front-street-view-3.jpg" alt="The restored 1928 facade of The Miners 1928 hotel seen from Front Street, Pottsville">
         </div>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="hero__frame" aria-hidden="true"></div>
@@ -420,18 +420,11 @@
     <!-- ============================================================
          INSTAGRAM FEED
          ------------------------------------------------------------
-         PLAN: this grid will auto-populate from @theminers1928hotel
-         via a Behold (behold.so) widget. The social media team is
-         setting up the Behold feed (requires an IG Business/Creator
-         account) and will provide an embed snippet OR a feed ID.
-
-         WHEN THE EMBED ARRIVES:
-           1. Add Behold's <script> tag (provided in the snippet).
-           2. Replace the static <img> list below with Behold's widget
-              element (e.g. <behold-widget feed-id="..."></behold-widget>),
-              keeping a few <img> tags as a no-JS / pre-load fallback.
-           3. Confirm post count (currently 6) and any hashtag filter.
-         Until then, the hardcoded images below stand in.
+         Auto-populates from @theminers1928hotel via a Behold
+         (behold.so) widget. To change which posts appear, the layout,
+         post count, or any hashtag filter, edit the feed in the Behold
+         dashboard — no code change required. The loader <script> below
+         injects Behold's widget runtime once per page.
          ============================================================ -->
     <section class="section section--charcoal">
         <div class="container">
@@ -439,16 +432,17 @@
                 <span class="section-label">Follow Along</span>
                 <h2>@theminers1928hotel</h2>
             </div>
-            <div class="insta-strip reveal" data-todo="replace with Behold Instagram feed widget once the team provides the embed/feed ID">
-                <img data-photo="HOME-10" src="./images/GarnetDahlia-0005.JPG" alt="Instagram photo">
-                <img data-photo="HOME-11" src="./images/GarnetDahlia-0201.JPG" alt="Instagram photo">
-                <img data-photo="HOME-12" src="./images/GarnetDahlia-1279.JPG" alt="Instagram photo">
-                <img data-photo="HOME-13" src="./images/GarnetDahlia-1372.JPG" alt="Instagram photo">
-                <img data-photo="HOME-14" src="./images/GarnetDahlia-6071.JPG" alt="Instagram photo">
-                <img data-photo="HOME-15" src="./images/vault.JPG" alt="Instagram photo">
+            <div class="insta-feed reveal">
+                <behold-widget feed-id="P6pwuZDKbpkxdjqmL3PQ"></behold-widget>
             </div>
         </div>
     </section>
+    <script>
+      (() => {
+        const d=document,s=d.createElement("script");s.type="module";
+        s.src="https://w.behold.so/widget.js";d.head.append(s);
+      })();
+    </script>
 
     <!-- FOOTER:START -->
 <footer class="footer">
