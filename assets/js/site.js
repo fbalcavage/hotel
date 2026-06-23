@@ -169,22 +169,39 @@
     }
 
     /* --- Booking-bar UI (only on pages that have it) --- */
+    // Parse an <input type="date"> value (YYYY-MM-DD) as LOCAL midnight.
+    // Mews docs require the new Date(year, monthIndex, day) constructor here:
+    // new Date("YYYY-MM-DD") is interpreted as UTC, which shifts the date back
+    // one day for guests in US (behind-UTC) time zones before it reaches Mews.
+    function parseLocalDate(value) {
+        var parts = value.split('-');
+        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    }
+
+    // Format a Date as YYYY-MM-DD in LOCAL time (toISOString() would use UTC and
+    // reintroduce the same off-by-one for the displayed default dates).
+    function formatLocalDate(date) {
+        var month = String(date.getMonth() + 1).padStart(2, '0');
+        var day = String(date.getDate()).padStart(2, '0');
+        return date.getFullYear() + '-' + month + '-' + day;
+    }
+
     var checkInDate = document.getElementById('checkInDate');
     var checkOutDate = document.getElementById('checkOutDate');
     if (checkInDate && checkOutDate) {
-        checkInDate.value = bookingStartDate.toISOString().split('T')[0];
-        checkOutDate.value = bookingEndDate.toISOString().split('T')[0];
+        checkInDate.value = formatLocalDate(bookingStartDate);
+        checkOutDate.value = formatLocalDate(bookingEndDate);
 
         checkInDate.addEventListener('change', function (event) {
-            bookingStartDate = new Date(event.target.value);
+            bookingStartDate = parseLocalDate(event.target.value);
             if (bookingStartDate > bookingEndDate) {
                 bookingEndDate = new Date(bookingStartDate);
                 bookingEndDate.setDate(bookingStartDate.getDate() + 7);
-                checkOutDate.value = bookingEndDate.toISOString().split('T')[0];
+                checkOutDate.value = formatLocalDate(bookingEndDate);
             }
         });
         checkOutDate.addEventListener('change', function (event) {
-            bookingEndDate = new Date(event.target.value);
+            bookingEndDate = parseLocalDate(event.target.value);
         });
     }
 

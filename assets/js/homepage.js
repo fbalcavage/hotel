@@ -147,19 +147,37 @@ Mews.Distributor({
 const checkInDate = document.getElementById('checkInDate');
 const checkOutDate = document.getElementById('checkOutDate');
 
-checkInDate.value = bookingStartDate.toISOString().split('T')[0];
-checkOutDate.value = bookingEndDate.toISOString().split('T')[0];
+// Parse an <input type="date"> value (YYYY-MM-DD) as LOCAL midnight.
+// Mews docs require the new Date(year, monthIndex, day) constructor here:
+// new Date("YYYY-MM-DD") is interpreted as UTC, which shifts the date back
+// one day for guests in US (behind-UTC) time zones before it reaches Mews.
+function parseLocalDate(value) {
+    const [year, month, day] = value.split('-').map(Number);
+    return new Date(year, month - 1, day);
+}
+
+// Format a Date as YYYY-MM-DD in LOCAL time (toISOString() would use UTC and
+// reintroduce the same off-by-one for the displayed default dates).
+function formatLocalDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
+checkInDate.value = formatLocalDate(bookingStartDate);
+checkOutDate.value = formatLocalDate(bookingEndDate);
 
 checkInDate.addEventListener('change', (event) => {
-    bookingStartDate = new Date(event.target.value);
+    bookingStartDate = parseLocalDate(event.target.value);
     if (bookingStartDate > bookingEndDate){
         bookingEndDate = new Date(bookingStartDate);
         bookingEndDate.setDate(bookingStartDate.getDate() + 7);
-        checkOutDate.value = bookingEndDate.toISOString().split('T')[0];
+        checkOutDate.value = formatLocalDate(bookingEndDate);
     }
 });
 checkOutDate.addEventListener('change', (event) => {
-    bookingEndDate = new Date(event.target.value);
+    bookingEndDate = parseLocalDate(event.target.value);
 });
 
 
