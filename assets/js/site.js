@@ -142,126 +142,140 @@
         });
     }
 
-    /* --- Mews booking (Book Now opens on every page) --- */
+    
     var bookingStartDate = new Date();
     var bookingEndDate = new Date();
     bookingEndDate.setDate(bookingEndDate.getDate() + 7);
     var bookingAdultCount = 2;
     var bookingChildCount = 0;
 
-    if (typeof Mews !== 'undefined') {
-        Mews.Distributor({
-            configurationIds: ['a45b2b13-ca16-4c8e-92a6-b41100c9ab41'],
-            openElements: '.book-now'
-        }, function (distributor) {
-            var availBtn = document.getElementById('check-availability');
-            if (availBtn && typeof $ !== 'undefined') {
-                $('#check-availability').click(function () {
-                    distributor.setStartDate(bookingStartDate);
-                    distributor.setEndDate(bookingEndDate);
-                    distributor.setAdultCount(bookingAdultCount);
-                    distributor.setChildCount(bookingChildCount);
-                    distributor.showRooms();
-                    distributor.open();
-                });
-            }
-        });
-    }
+    Mews.Distributor({
+        configurationIds: [
+            'a45b2b13-ca16-4c8e-92a6-b41100c9ab41',
+        ],
+        openElements: '.book-now',
+    } , function(distributor) {
+       $('#check-availability').click(function() {
+            distributor.setStartDate(bookingStartDate);
+            distributor.setEndDate(bookingEndDate);
+            distributor.setAdultCount(bookingAdultCount);
+            distributor.setChildCount(bookingChildCount);
+            distributor.showRooms();
+            distributor.open();
+       });
+    });
 
-    /* --- Booking-bar UI (only on pages that have it) --- */
-    // Parse an <input type="date"> value (YYYY-MM-DD) as LOCAL midnight.
-    // Mews docs require the new Date(year, monthIndex, day) constructor here:
-    // new Date("YYYY-MM-DD") is interpreted as UTC, which shifts the date back
-    // one day for guests in US (behind-UTC) time zones before it reaches Mews.
-    function parseLocalDate(value) {
-        var parts = value.split('-');
-        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
-    }
 
-    // Format a Date as YYYY-MM-DD in LOCAL time (toISOString() would use UTC and
-    // reintroduce the same off-by-one for the displayed default dates).
-    function formatLocalDate(date) {
-        var month = String(date.getMonth() + 1).padStart(2, '0');
-        var day = String(date.getDate()).padStart(2, '0');
-        return date.getFullYear() + '-' + month + '-' + day;
-    }
 
-    var checkInDate = document.getElementById('checkInDate');
-    var checkOutDate = document.getElementById('checkOutDate');
-    if (checkInDate && checkOutDate) {
-        checkInDate.value = formatLocalDate(bookingStartDate);
-        checkOutDate.value = formatLocalDate(bookingEndDate);
+    const checkInDate = document.getElementById('checkInDate');
+    const checkOutDate = document.getElementById('checkOutDate');
 
-        checkInDate.addEventListener('change', function (event) {
-            bookingStartDate = parseLocalDate(event.target.value);
-            if (bookingStartDate > bookingEndDate) {
-                bookingEndDate = new Date(bookingStartDate);
+    if (checkOutDate && checkInDate){
+        checkInDate.value = bookingStartDate.toISOString().split('T')[0];
+        checkOutDate.value = bookingEndDate.toISOString().split('T')[0];
+
+        checkInDate.addEventListener('change', (event) => {
+            const [year, month, day] = event.target.value.split('-').map(Number);
+            bookingStartDate = new Date(year, month - 1, day);
+            if (bookingStartDate > bookingEndDate){
+                bookingEndDate = new Date(year, month - 1, day);
                 bookingEndDate.setDate(bookingStartDate.getDate() + 7);
-                checkOutDate.value = formatLocalDate(bookingEndDate);
+                checkOutDate.value = bookingEndDate.toLocaleDateString('sv-SE');
             }
         });
-        checkOutDate.addEventListener('change', function (event) {
-            bookingEndDate = parseLocalDate(event.target.value);
+        checkOutDate.addEventListener('change', (event) => {
+            const [year, month, day] = event.target.value.split('-').map(Number);
+            bookingEndDate = new Date(year, month - 1, day);
         });
-    }
+}
 
-    /* date-picker icons */
-    document.querySelectorAll('.booking-bar__field').forEach(function (field) {
+
+
+    // --- Booking-bar: clicking the custom calendar icon opens the date picker ---
+    document.querySelectorAll('.booking-bar__field').forEach(function(field) {
         var dateInput = field.querySelector('input[type="date"]');
         if (!dateInput) return;
         var icon = field.querySelector('.booking-bar__icon');
         if (!icon) return;
+
         icon.setAttribute('role', 'button');
         icon.setAttribute('tabindex', '0');
         icon.setAttribute('aria-label', 'Open date picker');
-        var openPicker = function () {
+
+        function openPicker() {
             if (typeof dateInput.showPicker === 'function') {
                 try { dateInput.showPicker(); return; } catch (e) { /* fall through */ }
             }
             dateInput.focus();
             dateInput.click();
-        };
-        icon.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); openPicker(); });
-        icon.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPicker(); }
+        }
+
+        icon.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openPicker();
+        });
+        icon.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openPicker();
+            }
         });
     });
 
-    /* guest steppers */
-    document.querySelectorAll('.booking-bar__stepper').forEach(function (stepper) {
+    // --- Booking-bar guest steppers (adults / children) ---
+    document.querySelectorAll('.booking-bar__stepper').forEach(function(stepper) {
         var key = stepper.dataset.stepper;
         var min = parseInt(stepper.dataset.min, 10);
         var max = parseInt(stepper.dataset.max, 10);
         var valueEl = document.querySelector('[data-stepper-value="' + key + '"]');
-        if (!valueEl) return;
         var upBtn = stepper.querySelector('.booking-bar__step--up');
         var downBtn = stepper.querySelector('.booking-bar__step--down');
 
-        var syncBookingState = function (n) {
+        function syncBookingState(n) {
             if (key === 'adults') bookingAdultCount = n;
             else if (key === 'children') bookingChildCount = n;
-        };
+        }
+
+        // sync initial value from DOM into booking state
         syncBookingState(parseInt(valueEl.textContent, 10) || 0);
 
-        var refresh = function () {
+        function refresh() {
             var n = parseInt(valueEl.textContent, 10) || 0;
-            if (upBtn) { upBtn.classList.toggle('is-disabled', n >= max); upBtn.setAttribute('aria-disabled', n >= max); }
-            if (downBtn) { downBtn.classList.toggle('is-disabled', n <= min); downBtn.setAttribute('aria-disabled', n <= min); }
-        };
-        var step = function (delta) {
+            upBtn.classList.toggle('is-disabled', n >= max);
+            upBtn.setAttribute('aria-disabled', n >= max);
+            downBtn.classList.toggle('is-disabled', n <= min);
+            downBtn.setAttribute('aria-disabled', n <= min);
+        }
+
+        function step(delta) {
             var n = parseInt(valueEl.textContent, 10) || 0;
             var next = Math.max(min, Math.min(max, n + delta));
-            if (next !== n) { valueEl.textContent = next; syncBookingState(next); refresh(); }
-        };
-        stepper.querySelectorAll('.booking-bar__step').forEach(function (btn) {
+            if (next !== n) {
+                valueEl.textContent = next;
+                syncBookingState(next);
+                refresh();
+            }
+        }
+
+        stepper.querySelectorAll('.booking-bar__step').forEach(function(btn) {
             var delta = parseInt(btn.dataset.step, 10);
-            btn.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); step(delta); });
-            btn.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); step(delta); }
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                step(delta);
+            });
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    step(delta);
+                }
             });
         });
+
         refresh();
     });
+
 
     /* --- Photo-spot reference tags ---------------------------------------
        Draws a numbered tag over every photo location (data-photo="...") so a
